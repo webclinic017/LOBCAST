@@ -14,7 +14,7 @@ model evaluation and comparison.
 This main branch represents a newer version of LOBCAST named mini-LOBCAST. It enables benchmarking models on the standard 
 LOB dataset used in the literature, specifically FI-2010 [[dataset](https://etsin.fairdata.fi/dataset/73eb48d7-4dbc-4a10-a52a-da745b47a649)]. 
 This version will be expanded to include more datasets with procedures for handling data consistently for benchmarking. 
-These procedures are already available in the branch v1-LOBCAST, which will be integrated soon. We encourage the use of this version, 
+These procedures are already available in the branch v0-LOBCAST, which will be integrated soon. We encourage the use of this version, 
 while also recommending a glance at the other branch for additional implemented models and functions.
 
 ## Installing LOBCAST 
