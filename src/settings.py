@@ -5,6 +5,8 @@ import torch
 import src.constants as cst
 import multiprocessing
 
+import src.settings
+
 np.set_printoptions(suppress=True)
 from src.utils.utils_generic import dict_to_string
 from enum import Enum

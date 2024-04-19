@@ -11,8 +11,8 @@ INDEPENDENT_VARIABLES = {
     SettingsExp.OBSERVATION_PERIOD: [100]
 }
 
-# no entry in here = cartesian product of the INDEPENDENT_VARIABLES
-# k: v means, when k does not vary, the variable is fixed to v
+# no entry in here = cartesian product of INDEPENDENT_VARIABLES
+# k: v, when k does not vary, the variable k is fixed to v
 INDEPENDENT_VARIABLES_CONSTRAINTS = {
     SettingsExp.PREDICTION_MODEL: cst.Models.CNN1,  # when other variables vary, PREDICTION_MODEL = MLP
     SettingsExp.PREDICTION_HORIZON_FUTURE: 5

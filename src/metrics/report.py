@@ -45,6 +45,7 @@ def plot_metric_training(json_data_path, metric, pdf):
 
     plt.tight_layout()
     pdf.savefig(plt.gcf())
+    plt.close()
 
 
 def plot_metric_best(json_data_path, metric, pdf):
@@ -73,3 +74,4 @@ def plot_metric_best(json_data_path, metric, pdf):
 
     plt.tight_layout()
     pdf.savefig(plt.gcf())
+    plt.close()

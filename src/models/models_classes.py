@@ -13,3 +13,4 @@ class Models(Enum):
     CNN1 = cnn1.CNN_lm
     CNN2 = cnn2.CNN2_ml
     BINCTABL = binctabl.BinCTABL_ml
+    # add new modules here

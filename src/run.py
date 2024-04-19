@@ -15,6 +15,8 @@ def run_simulation(sim):
             sim.update_hyper_parameters(hparams_config)
             sim.end_setup()
             sim.run()
+            sim.evaluate()
+            sim.close()
     else:
         # hyper params search is handled by wandb
         sweep_id, wandb_lunch = wandb_init(sim)
