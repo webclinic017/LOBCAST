@@ -48,8 +48,7 @@ class LOBCAST:
             self.__sanity_check_settings()
 
         # at this point parameters are set
-        run_description = "\nRunning with settings:\n", self.SETTINGS.__dict__
-        print(run_description)
+        print("\nRunning with settings:\n", self.SETTINGS.__dict__)
 
     def __sanity_check_settings(self):
         print("THIS IS A SANITY CHECK RUN.")
@@ -173,13 +172,8 @@ class LOBCAST:
             # best model evaluation starts
             trainer.validate(nets_module, data_module, ckpt_path=model_path)
         trainer.test(nets_module, data_module, ckpt_path=model_path)
-        self.__plot_stats()
-        print('Completed.')
 
-        if self.SETTINGS.IS_SANITY_CHECK:
-            exit("Sanity check passed.")
-
-    def __plot_stats(self):
+    def evaluate(self):
         fnames_root = self.SETTINGS.DIR_EXPERIMENTS + self.sim_name_format()
         pdf_best    = PdfPages(fnames_root + "_" + 'metrics_best_plots.pdf')
         pdf_running = PdfPages(fnames_root + "_" + 'metrics_train_plots.pdf')
@@ -190,3 +184,8 @@ class LOBCAST:
 
         pdf_best.close()
         pdf_running.close()
+
+    def close(self):
+        print('Completed.')
+        if self.SETTINGS.IS_SANITY_CHECK:
+            exit("Sanity check passed.")

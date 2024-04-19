@@ -85,11 +85,11 @@ class FIDataset(data.Dataset):
             F_NAME = DIR + '/{}_Dst_{}_{}_CF_7'.format(DATASET_TYPE, AUCTION, NORMALIZATION) + F_EXTENSION
 
             if not os.path.exists(F_NAME):
-                error =  "\n\nFile {} not found!".format(F_NAME)
-                error += "\n\n (1) Download the dataset in data, by running:\n{}".format(cst.DOWNLOAD_FI_COMMAND)
+                error =  "\n\nFile {} not found! Make sure to follow the following steps.".format(F_NAME)
+                error += "\n\n (1) Download the dataset in data/datasets, by running:\n{}".format(cst.DOWNLOAD_FI_COMMAND)
                 error += "\n (2) Unzip the file."
-                error += "\n (3) Run: mv data/published/ data/FI-2010"
-                error += "\n (4) Unzip data/FI-2010/BenchmarkDatasets/BenchmarkDatasets.zip in data/FI-2010/BenchmarkDatasets"
+                error += "\n (3) Run: mv data/datasets/published/ data/datasets/FI-2010"
+                error += "\n (4) Unzip data/datasets/FI-2010/BenchmarkDatasets/BenchmarkDatasets.zip in data/datasets/FI-2010/BenchmarkDatasets"
                 error += "\n"
                 raise FileNotFoundError(error)
 
@@ -128,9 +128,9 @@ class FIDataset(data.Dataset):
         self.__prepare_X()
         self.__prepare_y()
 
-        print("> Dataset type:", self.dataset_type, " - normalization:", self.normalization_type)
+        print("Dataset type:", self.dataset_type, " - normalization:", self.normalization_type)
         occs, occs_vec = self.__class_balancing(self.samples_y)
 
         perc = ["{}%".format(round(i, 2)) for i in (occs_vec / np.sum(occs_vec)) * 100]
-        print(">> balancing", occs, "or even", perc)
+        print("Balancing", occs, "=>", perc)
         print()

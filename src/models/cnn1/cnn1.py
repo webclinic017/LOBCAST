@@ -4,6 +4,7 @@
 import pytorch_lightning as pl
 from torch import nn
 
+import src.models.lobcast_model
 from src.models.lobcast_model import LOBCAST_model, LOBCAST_module
 from src.hyper_parameters import HPTunable
 

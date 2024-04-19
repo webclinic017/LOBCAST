@@ -11,6 +11,8 @@ def wandb_init(sim):
 
             wandb_instance.log({k: str(v) for k, v in sim.SETTINGS.__dict__.items()})
             sim.run()
+            sim.evaluate()
+            sim.close()
 
     sweep_id = wandb.sweep(project=cst.PROJECT_NAME_VERSION, sweep={
         'method': sim.SETTINGS.WANDB_SWEEP_METHOD,
