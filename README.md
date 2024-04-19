@@ -224,3 +224,6 @@ Prata, Matteo, et al. __"LOB-based deep learning models for stock price trend pr
  
 Link: https://link.springer.com/article/10.1007/s10462-024-10715-4 
 
+
+### Acknowledgments
+LOBCAST was developed by [Matteo Prata](https://github.com/matteoprata), [Giuseppe Masi](https://github.com/giuseppemasi99), [Leonardo Berti](https://github.com/LeonardoBerti00), [Andrea Coletta](https://github.com/Andrea94c), [Irene Cannistraci](https://github.com/icannistraci), Viviana Arrigoni.
