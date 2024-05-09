@@ -37,7 +37,7 @@ To download the FI-2010 Dataset [[dataset](https://etsin.fairdata.fi/dataset/73e
 ```
 mkdir data/datasets
 cd data/datasets
-wget --content-disposition "https://download.fairdata.fi:443/download?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
+wget --content-disposition "wget --content-disposition "https://download.fairdata.fi:443/download?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTU1MDU5OTksImRhdGFzZXQiOiI3M2ViNDhkNy00ZGJjLTRhMTAtYTUyYS1kYTc0NWI0N2E2NDkiLCJwYWNrYWdlIjoiNzNlYjQ4ZDctNGRiYy00YTEwLWE1MmEtZGE3NDViNDdhNjQ5X2JoeXV4aWZqLnppcCIsImdlbmVyYXRlZF9ieSI6IjlmZGRmZmVlLWY4ZDItNDZkNS1hZmIwLWQyOTM0NzdlZjg2ZiIsInJhbmRvbV9zYWx0IjoiYjg1ZjNhM2YifQ.NOT94HPMUdwpi6lFsmnRhkToP2FAdmbmoEkhlRNBQGM"
 ```
 2. Unzip the file 
 3. Run:
